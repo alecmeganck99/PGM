@@ -1,0 +1,278 @@
+.about_header {
+    display: flex;
+    margin: 50px 0;
+    position: relative;
+
+    h2 {
+        font-size: 80px;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 50%;
+        right: 45%;
+    }
+
+    &__image {
+        width: 700px;
+        height: 360px;
+        margin-left: auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 3px solid $color-white;
+        position: relative;
+
+        &::after {
+            content: ' ';
+            position: absolute;
+            top: 2.5px;
+            left: -10px;
+            right: 3px;
+            bottom: -10px;
+            border: 3px solid white;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.about_information {
+    h3 {
+        font-size: 40px;
+    }
+
+    &__blocks {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        a {
+            color: $color-white;
+            text-decoration: none;
+
+            .information_block {
+                width: 350px;
+                margin: 50px 0;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                border: 3px solid $color-white;
+                position: relative;
+                font-weight: 300;
+                padding: 10px;
+
+                ::after {
+                    content: ' ';
+                    position: absolute;
+                    top: 2.5px;
+                    left: -10px;
+                    right: 3px;
+                    bottom: -10px;
+                    border: 3px solid white;
+                }
+
+                &__title {
+                    font-size: 25px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+
+                &__txt {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.about_curriculum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+        font-size: 40px;
+    }
+
+    &__txt {
+        width: 300px;
+
+        h3 {
+            font-size: 40px;
+        }
+
+        a {
+            color: $color-white;
+            text-decoration: none;
+            font-size: 16px;
+            width: 130px;
+            margin-top: 20px;
+        }
+    }
+
+    &__image {
+        width: 550px;
+        height: 330px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 3px solid $color-white;
+        position: relative;
+
+        &::after {
+            content: ' ';
+            position: absolute;
+            top: 2.5px;
+            left: -10px;
+            right: 3px;
+            bottom: -10px;
+            border: 3px solid white;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.about_teams {
+    &__teachers {
+        width: 100%;
+        height: 550px;
+        margin: 50px 0;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 3px solid $color-white;
+        position: relative;
+
+        &::after {
+            content: ' ';
+            position: absolute;
+            top: 2.5px;
+            left: -10px;
+            right: 3px;
+            bottom: -10px;
+            border: 3px solid white;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__students {
+        display: flex;
+        margin: 50px 0;
+        overflow-x: scroll;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 3px solid $color-white;
+
+        a {
+            text-decoration: none;
+            color: $color-white;
+
+            .information_block {
+                width: 250px;
+                height: 300px;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                border: 3px solid $color-white;
+                position: relative;
+                margin-right: 20px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                p {
+                    color: $color-black;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    position: absolute;
+                    bottom: 0;
+                    background: $color-white;
+                    padding: 2.5px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .about_header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 25px 0;
+
+        h2 {
+            margin: 25px 0;
+            font-size: 25px;
+            position: unset;
+        }
+    }
+
+    .about_curriculum {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .bars {
+            width: 100%;
+        }
+
+        &__txt {
+            width: 100%;
+            margin: 10px 0;
+
+            h3 {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            a {
+                font-size: 12px;
+                margin: 10px 0;
+            }
+        }
+
+        &__image {
+            width: 100%;
+        }
+    }
+
+    .about_workteaching {
+        .about_information__blocks {
+            a {
+                .information_block {
+                    margin: 25px 0;
+                }
+            }
+        }
+    }
+
+    .about_teams {
+        &__teachers {
+            margin: 25px 0;
+            height: auto;
+        }
+
+        &__students {
+            margin: 25px 0;
+        }
+    }
+}

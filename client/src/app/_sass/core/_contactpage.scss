@@ -1,0 +1,164 @@
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+
+    &__mails {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 40%;
+
+        .contact-mails {
+            margin: 20px 0;
+
+            &__title {
+                font-size: 30px;
+            }
+
+            &__name {
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+
+            &__mail {
+                a {
+                    color: $color-white;
+                    text-decoration: none;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    &__form {
+        width: 50%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto 0;
+
+        #name {
+            width: 100%;
+            height: 30px;
+            margin: 10px 0;
+            font-family: 'Kanit', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            color: $color-white;
+            background: none;
+            border: 3px solid $color-white;
+
+            ::placeholder {
+                color: $color-white;
+                opacity: 1;
+            }
+        }
+
+        #email {
+            width: 100%;
+            height: 30px;
+            margin: 10px 0;
+            font-family: 'Kanit', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            color: $color-white;
+            background: none;
+            border: 3px solid $color-white;
+
+            ::placeholder {
+                color: $color-white;
+                opacity: 1;
+            }
+        }
+
+        #text {
+            width: 100%;
+            height: 30px;
+            margin: 10px 0;
+            font-family: 'Kanit', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            color: $color-white;
+            background: none;
+            border: 3px solid $color-white;
+
+            ::placeholder {
+                color: $color-white;
+                opacity: 1;
+            }
+        }
+
+        button {
+            margin: 20px 0;
+            font-family: 'Kanit', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            text-transform: uppercase;
+            padding: 5px 20px;
+            color: $color-white;
+            background: none;
+            border: 3px solid $color-white;
+            position: relative;
+            transition: .2s;
+
+            &::after {
+                content: ' ';
+                position: absolute;
+                top: 2.5px;
+                left: -10px;
+                right: 3px;
+                bottom: -10px;
+                border: 3px solid white;
+            }
+        }
+
+        button:hover {
+            color: $color-black;
+            background-color: $color-white;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .contact-header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 25px 0;
+
+        &__mails {
+            width: 100%;
+
+            .contact-mails {
+                margin: 10px 0;
+
+                &__title {
+                    font-size: 20px;
+                }
+
+                &__name {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                }
+
+                &__mail {
+                    a {
+                        color: $color-white;
+                        text-decoration: none;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        &__form {
+            width: 80%;
+        }
+    }
+}
